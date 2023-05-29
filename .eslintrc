@@ -1,0 +1,14 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true,
+        "vue/setup-compiler-macros": true
+    },
+    "extends": ["@nuxtjs/eslint-config-typescript", "prettier"],
+    "overrides": [
+        {
+            "files": ["./server/**/*.ts"]
+        }
+    ]
+}
