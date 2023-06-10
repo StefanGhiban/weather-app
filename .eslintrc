@@ -5,7 +5,7 @@
         "node": true,
         "vue/setup-compiler-macros": true
     },
-    "extends": ["@nuxtjs/eslint-config-typescript", "prettier"],
+    "extends": ["@nuxtjs/eslint-config-typescript", "plugin:prettier/recommended"],
     "overrides": [
         {
             "files": ["./server/**/*.ts"]
