@@ -1,11 +1,10 @@
 <template>
-    <div class="p-p-px bg-green-400 text-lg">testingß</div>
+    <div class="bg-green-400 text-lg">
+        <NavbarComponent />
+        <div>okook</div>
+    </div>
 </template>
 
-<script lang="ts"></script>
+<script setup lang="ts"></script>
 
-<style scoped>
-.testing {
-    @apply bg-green-400 text-lg;
-}
-</style>
+<style scoped></style>
