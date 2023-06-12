@@ -8,8 +8,8 @@
             alt="user-profile-image"
         />
 
-        <button v-if="data?.user" @click="() => signOut()">Sign out</button>
-        <button v-else @click="() => signIn('')">Sign in</button>
+        <button v-if="data?.user" @click="signOut()">Sign out</button>
+        <button v-else @click="signIn('')">Sign in</button>
 
         <!-- User name -->
         <p>{{ data?.user?.name }}</p>
