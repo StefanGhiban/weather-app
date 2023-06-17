@@ -1,23 +1,27 @@
 <template>
-    <div class="bg-green-400 text-lg">
-        <div>
-            <input v-model="citySearchInput" type="text" @input="debouncedSearch" />
+    <div>
+        <input
+            v-model="citySearchInput"
+            class="rounded-2xl border-2 border-red-200 bg-blue-300 px-4 focus:border-red-600 focus:outline-0"
+            type="text"
+            @input="debouncedSearch"
+        />
 
-            <div v-for="city in citiesList" :key="city.id">
-                <button @click="getWeather(city)">{{ city.name }}, {{ city.country }}</button>
-            </div>
+        <div v-for="city in citiesList" :key="city.id">
+            <NuxtLink
+                :to="{
+                    name: 'city-weather-details',
+                    query: { lat: city.latitude, long: city.longitude, name: city.name },
+                }"
+            >
+                {{ city.name }}, {{ city.country }}
+            </NuxtLink>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-interface City {
-    id: number;
-    name: string;
-    country: string;
-    longitude: number;
-    latitude: number;
-}
+import { City } from "~/typesAndInterfaces";
 
 const citySearchInput = ref("");
 
@@ -41,14 +45,5 @@ const getCoordinates = async () => {
     );
 
     citiesList.value = data.value?.results;
-};
-
-/** TODO: this function will probably be moved to another page called city weather or smth. */
-const getWeather = async (city: City) => {
-    const { data } = await useFetch(
-        `https://api.open-meteo.com/v1/forecast?latitude=${city.latitude}&longitude=${city.longitude}&hourly=temperature_2m&timezone=auto`
-    );
-
-    console.log(data.value);
 };
 </script>

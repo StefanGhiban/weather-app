@@ -10,8 +10,5 @@
         {
             "files": ["./server/**/*.ts"]
         }
-    ],
-    "rules": {
-        "vue/no-multiple-template-root": "off"
-    }
+    ]
 }
