@@ -7,5 +7,8 @@
         "*.css": "tailwindcss"
     },
     // Auto-complete `.value` attribute when volar is installed
-    "volar.autoCompleteRefs": true
+    "volar.autoCompleteRefs": true,
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    }
 }
