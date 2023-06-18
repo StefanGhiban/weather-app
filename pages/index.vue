@@ -7,15 +7,17 @@
             @input="debouncedSearch"
         />
 
-        <div v-for="city in citiesList" :key="city.id">
-            <NuxtLink
-                :to="{
-                    name: 'city-weather-details',
-                    query: { lat: city.latitude, long: city.longitude, name: city.name },
-                }"
-            >
-                {{ city.name }}, {{ city.country }}
-            </NuxtLink>
+        <div v-auto-animate>
+            <div v-for="city in citiesList" :key="city.id">
+                <NuxtLink
+                    :to="{
+                        name: 'city-weather-details',
+                        query: { lat: city.latitude, long: city.longitude, name: city.name },
+                    }"
+                >
+                    {{ city.name }}, {{ city.country }}
+                </NuxtLink>
+            </div>
         </div>
     </div>
 </template>
@@ -33,7 +35,7 @@ const citiesList = ref<City[] | undefined>([]);
  */
 const debouncedSearch = useDebounce(function () {
     getCoordinates();
-}, 400);
+}, 300);
 
 /**
  * The latitude and longitude are fetched from the geocoding api.
