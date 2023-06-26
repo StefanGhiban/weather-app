@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center justify-between bg-orange-400 px-20 py-2">
-        <p class="text-xl text-white">Weather app</p>
+        <NuxtLink class="text-xl text-white" to="/">Weather App</NuxtLink>
         <!-- User image -->
         <img
             class="w-12 rounded-full"
