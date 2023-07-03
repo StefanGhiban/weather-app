@@ -6,9 +6,18 @@
     "files.associations": {
         "*.css": "tailwindcss"
     },
-    // Auto-complete `.value` attribute when volar is installed
-    "volar.autoCompleteRefs": true,
+    "tailwindCSS.experimental.configFile": "tailwind.config.ts",
+    "tailwindCSS.experimental.classRegex": [["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"]],
+    "editor.quickSuggestions": {
+        "strings": true
+    },
     "[prisma]": {
         "editor.defaultFormatter": "Prisma.prisma"
-    }
+    },
+    "tailwindCSS.classAttributes": ["class", "className", "ngClass", "ui"],
+    "tailwindCSS.includeLanguages": {
+        "vue": "html",
+        "vue-html": "html"
+    },
+    "css.validate": false
 }

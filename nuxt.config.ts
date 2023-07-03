@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: ["@sidebase/nuxt-auth", "@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-lodash"],
+    modules: ["@sidebase/nuxt-auth", "@nuxt/devtools", "nuxt-lodash", "@nuxthq/ui"],
 
     auth: {
         provider: {

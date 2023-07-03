@@ -13,8 +13,8 @@
     },
     "devDependencies": {
         "@nuxt/devtools": "^0.5.5",
+        "@nuxthq/ui": "^2.5.0",
         "@nuxtjs/eslint-config-typescript": "^12.0.0",
-        "@nuxtjs/tailwindcss": "^6.7.0",
         "@sidebase/nuxt-auth": "^0.6.0-beta.2",
         "@types/lodash": "^4.14.195",
         "@types/node": "^18.16.14",

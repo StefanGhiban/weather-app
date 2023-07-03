@@ -56,3 +56,10 @@ Locally preview production build:
 ```bash
 npm run preview
 ```
+
+## Design steps
+
+-   choose primary, secondary, tertiary, accent, etc (look at the refactoring ui link)
+-   build some components that can be used accross the app: button, normal input, tabs, combobox
+    -   build them as we go
+-   create layouts and think about the structure of the pages

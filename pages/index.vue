@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <input
+    <div class="flex flex-col items-center justify-center pt-20">
+        <UInput
             v-model="citySearchInput"
-            class="rounded-2xl border-2 border-red-200 bg-blue-300 px-4 focus:border-red-600 focus:outline-0"
-            type="text"
+            placeholder="Search for a city..."
+            icon="i-heroicons-magnifying-glass-20-solid"
             @input="debouncedSearch"
         />
 
